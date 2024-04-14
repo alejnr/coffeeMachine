@@ -29,3 +29,12 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+
+
+# Prompt user
+turnOnCoffeMachine = True
+
+while turnOnCoffeMachine: 
+    choice = input("What would you like? (espresso/latte/cappuccino):")
+    if choice == "off":
+        turnOnCoffeMachine = False

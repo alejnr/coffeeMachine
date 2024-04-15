@@ -48,6 +48,17 @@ def process_coins():
     total += int(input("how many pennies?: ")) * 0.01
     return total
 
+def isTransaction_successful(customer_money, drink_cost):
+    if customer_money >= drink_cost:
+        change = round(customer_money - drink_cost, 2)
+        print(f"Here is your ${change} change.")
+        global money
+        money += drink_cost
+        return True
+    else:
+        print("Sorry insufficient funds, money refunded.")
+        return False
+
 
 # Prompt user
 turnOnCoffeMachine = True
@@ -69,3 +80,6 @@ while turnOnCoffeMachine:
 
 # process coins
             payment = process_coins()
+
+#check transaction successful
+            isTransaction_successful(payment, drink["cost"])

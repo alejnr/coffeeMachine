@@ -30,7 +30,7 @@ resources = {
     "coffee": 100,
 }
 
-money = 0
+profit = 0
 
 def isEnoughResource(orderIngredients):
     for item in orderIngredients:

@@ -60,7 +60,7 @@ def isTransaction_successful(customer_money, drink_cost):
         return False
     
 
-def make_coffe(drink_name, order_ingredients)
+def make_coffe(drink_name, order_ingredients):
     for item in order_ingredients:
         resources[item] -= order_ingredients[item]
     print(f"Here is your {drink_name}. Enjoy!")

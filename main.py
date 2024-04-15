@@ -32,6 +32,23 @@ resources = {
 
 money = 0
 
+def isEnoughResource(orderIngredients):
+    for item in orderIngredients:
+        if orderIngredients[item] >= resources[item]:
+            print(f"Sorry there is not enough {item}.")
+            return False
+    return True
+
+
+def process_coins():
+    print("Please insert coins")
+    total = int(input("how many quarters?: ")) * 0.25
+    total += int(input("how many dimes?: ")) * 0.1
+    total += int(input("how many nickles?: ")) * 0.05
+    total += int(input("how many pennies?: ")) * 0.01
+    return total
+
+
 # Prompt user
 turnOnCoffeMachine = True
 
@@ -44,3 +61,11 @@ while turnOnCoffeMachine:
         print(f"Milk: {resources['milk']}ml")
         print(f"Coffee: {resources['coffee']}g")
         print(f"Money: £{money}")
+
+# check resuource sufficient
+    else:
+        drink = MENU[choice]
+        if isEnoughResource(drink["ingredients"]):
+
+# process coins
+            payment = process_coins()
